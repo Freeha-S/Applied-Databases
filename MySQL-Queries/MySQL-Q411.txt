@@ -1,3 +1,11 @@
+Give the MySQL command that shows:
+• The name of the cities
+• The Arrival Date in the cities
+• The name of the country the city is in
+For all cities and countries visited by “Alan” in alphabetical order by city name.
+*****
+Answer:
+
 select city.name, hasvisitedcity.dateArrived,country.name
 from hasvisitedcity
 join city on hasvisitedcity.cityID=city.ID

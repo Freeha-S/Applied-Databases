@@ -1,3 +1,14 @@
+Give the SQL command to show for each country in North America:
+• The name of the capital city
+• The name of the country
+• The official language(s)
+• The percentage of people who speak the official language(s)
+The results should be alphabetical city name order, and within that by country name order, and
+within that by language order, and within that by ascending percentage.
+
+****
+
+SQL Command:
 select c.name,country.name,cl.language, cl.percentage 
 from city as c
 join country on country.capital=c.ID 

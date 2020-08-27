@@ -1,1 +1,6 @@
+Give the MongoDB command to find the average age of students.
+***
+
+MongoDB command:
+
 db.docs.aggregate([ {$group:{_id:null,"Average":{$avg:"$details.age"}}} , {$project: {"_id":0, "Average":1}} ])

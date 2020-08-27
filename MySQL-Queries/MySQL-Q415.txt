@@ -1,3 +1,17 @@
+Give the SQL command to show for each country person:
+• The person’s name
+• The name of the city the person visited
+• A column called Stay Length that shows the following:
+Time the person stayed in city Stay Length column output
+Less than 20 days 		Short
+Between 20 and 99 		days Long
+Over 99 days 			Very Long
+The results should be sorted alphabetically by personname, and within that by city name.
+
+****
+
+SQL Command:
+
 select p.personname,c.name,
   CASE
     WHEN (DATEDIFF(dateleft, datearrived))< 20 THEN "Short"

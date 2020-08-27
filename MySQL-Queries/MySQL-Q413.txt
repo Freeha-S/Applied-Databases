@@ -1,3 +1,17 @@
+Give the SQL command to show the following in ascending personID order:
+• The person’s ID
+• The person’s name
+• The Person’s age
+• A column called Stage that shows the following:
+Person’s Age 	Stage column output
+Under 18 		Child
+Between 19 and 29 	Late teens/Twenties
+Between 31 and 39 	Thirtysomething
+40 or older 		Other
+*****
+
+SQL Command:
+
 select personID,personname,age,
 CASE
 	WHEN age < 18 THEN "Child"

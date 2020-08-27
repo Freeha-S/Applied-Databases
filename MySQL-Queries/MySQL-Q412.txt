@@ -1,1 +1,7 @@
+Give the MySQL command to show the country name the country’s life expectancy for all countries
+in Europe whose life expectancy is lower than the average in alphabetical order by country name.
+
+***
+SQL command:
+
 select name ,lifeexpectancy from country where lifeexpectancy < (select avg(lifeExpectancy) from country) and region like "%Europe%" order by name asc;

@@ -1,1 +1,7 @@
+Give the MongoDB command to show the name of each course and Honours which has the value
+true if the course level is 8 or higher, otherwise false. The output should be sorted by name.
+*****
+
+MongoDB Command:
+
  db.docs.aggregate([ {$match:{name:{$exists:true}}},{$sort:{name:1}},{ $project:{_id:0,name: 1, Honours:{$gte:["$level",8]}}}])
