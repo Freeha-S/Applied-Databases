@@ -1,0 +1,7 @@
+select c.name,country.name,cl.language, cl.percentage 
+from city as c
+join country on country.capital=c.ID 
+join countrylanguage as cl on cl.CountryCode=country.Code 
+where country.continent LIKE "%North America%" And
+cl.IsOfficial= "T"
+order by c.name,country.name,cl.language,cl.percentage asc;

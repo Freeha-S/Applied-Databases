@@ -1,0 +1,6 @@
+select city.name, hasvisitedcity.dateArrived,country.name
+from hasvisitedcity
+join city on hasvisitedcity.cityID=city.ID
+join country on city.countryCode=country.Code
+where
+  hasvisitedcity.dateArrived in (select dateArrived from hasvisitedcity where personID = (select personID from Person where personName = "Alan")) order by city.Name asc;
